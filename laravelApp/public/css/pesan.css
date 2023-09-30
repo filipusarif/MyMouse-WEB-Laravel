@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@200;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --blue-color: #007acc;
+    --backgrond : #222222;
+    --container : #2C2C2C;
+    --div: #2d2d30;
+    --card : #3e3e42;
+    --text : #A0A0A0;
+    --foot : #1A1B1D;
+}
+
+body {
+    background-color: #111111;
+}
+
+/* smooth scroling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161616;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 20px;
+    background-color: #161616;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: black;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333333;
+    border-radius: 50px;
+}
+
+/* header */
+
+.keAtas {
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px  #17181A;
+}
+
+#main {
+    padding-top: 60px;
+    padding-inline: 10%;
+    background-color: var(--backgrond);
+    /* background-color: #007acc; */
+    min-height:100vh ;
+}
+
+#main h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+}
+
+.container-all {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #007acc; */
+}
+
+.container-pesan {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0;
+    /* background-color: #007acc; */
+    /* width: 80%; */
+    background-color: var(--container);
+    padding: 20px 30px;
+    width: 80%;
+    color: #A0A0A0;
+    border-radius: 15px;
+}
+
+.container-atas {
+    display: flex;
+    justify-content:space-evenly;
+    width: 80%;
+    /* background-color: crimson; */
+    /* background-color: var(--container); */
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid #161616;
+}
+
+.wrapper-gambar {
+    padding: 10px;
+    width: 40%;
+    /* background-color: #007acc; */
+    text-align: center;
+}
+
+.wrapper-info {
+    padding: 10px;
+    width: 60%;
+    /* background-color: #b8cc00; */
+}
+
+.container-atas img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+table {
+    width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* background-color: #007acc; */
+}
+
+th:first-child {
+    width: 25%;
+    /* background-color: #007acc; */
+}
+
+th:nth-child(2) {
+    width: 11%;
+    /* background-color: yellow; */
+}
+
+th:nth-child(3) {
+    width: 30%;
+    /* background-color: red; */
+}
+
+th:nth-child(4) {
+    width: 19%;
+    /* background-color: rebeccapurple; */
+}
+
+
+td:first-child {
+    text-align: left;
+}
+
+.belumPesan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.belumPesan p {
+    color: var(--text);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.belumPesan a {
+    text-decoration: none;
+    color: #007acc;
+    text-transform: capitalize;
+}
+
+.container-bawah {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 10px; */
+    /* background-color: deeppink; */
+    /* background-color: var(--container); */
+    padding: 20px;
+    width: 80%;
+}
+
+.alamat {
+    /* background-color: #007acc; */
+    width: 200px;
+    height: 100px;
+}
+
+.pos {
+    /* background-color: #ff0000; */
+    width: 120px;
+    height: 100px;
+    text-align: center;
+}
+
+.pos h1 {
+    font-size: 20px;
+}
+
+.metode {
+    /* background-color: chartreuse; */
+    height: 100px;
+    text-align: center;
+}
+
+.hp {
+    /* background-color: deeppink; */
+    height: 100px;
+    text-align: center;
+}
+
+.kurir {
+    /* background-color: gold; */
+    height: 100px;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: darkgreen; */
+    /* background-color: var(--container); */
+
+    width: 80%;
+}
+
+.flex p {
+    font-size: 14px;
+}
+
+.sampai {
+    text-decoration: none;
+    color: #fff;
+    background: #007acc;
+    outline: none;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+}

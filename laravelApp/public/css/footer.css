@@ -1,0 +1,58 @@
+/* footer */
+
+#footerHome{
+    
+    width: 100%;
+    background-color: #121213;
+    padding-inline: 10%;
+
+}
+
+.containerFoot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+    padding-inline: 10%;
+    
+}
+
+.containerFoot ul{
+    list-style-type: none;
+    text-align: center;
+    
+}
+
+.containerFoot>ul>li{
+    padding: 3px;
+}
+
+.containerFoot>ul>li>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.containerFoot>ul>li>p{
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.containerFoot>ul>li>h3{
+    color: #fff;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.footSosmed{
+    padding: 15px;
+    width: 100%;
+    
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.footSosmed>a{
+    padding: 0px 5px;
+}

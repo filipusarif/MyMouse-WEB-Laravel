@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;800;900&family=Roboto:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --blue-color: #23B3FE;
+    --backgrond : #222222;
+    --container : #2C2C2C;
+    --form: #4E4E4E;
+    --card : #393939;
+    --text : #DCDCDC;
+    --text1 :#747474 ;
+    --foot : #111111;
+}
+
+body {
+    background-color: #1A1B1D;
+}
+
+/* smooth scroling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Bar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #161616;
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 10px;
+    height: 20px;
+    background-color: #161616;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-button {
+    background-color: black;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #333333;
+    border-radius: 50px;
+}
+
+
+
+/* header */
+.keAtas {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px;
+}
+
+/* hamburger menu */
+
+.hamburger {
+    height: 20px;
+    width: 25px;
+    /* background-color: #017A23; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    display: none;
+
+}
+
+.hamburger input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.hamburger span{
+    height: 4px;
+    width: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .5s ease;
+}
+
+.hamburger span:nth-child(2){
+    transform-origin: 100% 0;
+}
+
+.hamburger span:nth-child(4){
+    transform-origin: 100% 0;
+}
+
+.hamburger input:checked ~ span:nth-child(2){
+    transform: rotate(-43deg) translate(-2px,-2px);
+}
+
+.hamburger input:checked ~ span:nth-child(3){
+    transform: translate(30px) scale(0);
+}
+
+.hamburger input:checked ~ span:nth-child(4){
+    transform: rotate(45deg) translate(1px,1px);
+}
+
+.toko {
+    display: none;
+}
+
+/* Responsive navbar */
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+    .navigation li {
+        padding: 10px 7px;
+    }
+
+    .container {
+    padding: 5px 10%;
+    }
+
+    .row2 {
+        height: unset;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:576px) {
+    .shopLogo {
+        display: none;
+    }
+    
+    .hamburger {
+        display:flex;
+    }
+    
+    .logo {
+        width: 150px;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        justify-content:start;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        background-color:#161618 ;
+        padding-left: 80px;
+        padding-top: 50px;
+        opacity: 0;
+        transform: translateY(-100%);
+        z-index: 0;
+        /* display: none; */
+        transition: all .4s ease;
+    }
+
+    .slide {
+        transform: translateY(0%);
+        opacity: 1;
+        /* transition: all .4s ease;
+        display: flex; */
+    }
+
+    .toko {
+        display: flex;
+    }
+
+    /* footer */
+    .containerFoot {
+        flex-direction: column;
+    }
+}
+
+.keAtas {
+    position: fixed;
+    z-index: 2;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 0px 15px #17181A;
+    /* text-decoration: none; */
+}
+
+/* content */
+
+.newsPage1 {
+    /* height: 130vh; */
+    width: 100%;
+    background-color: var(--backgrond);
+    /* padding-inline: 10%; */
+    /* overflow-x: hidden; */
+}
+
+.newsHeader {
+    /* position: absolute; */
+    top: 15%;
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blue-color)!important;
+    font-size: 2em;
+    text-shadow: 5px 5px 10px #000;
+}
+
+.containerAll {
+    width: 100%;
+    margin-top: 20px;
+    /* min-height: 100vh; */
+    padding-inline: 10%;
+    /* overflow-x: hidden; */
+    /* background-color: yellow; */
+    position: relative;
+    padding-inline: 10%;
+    padding-bottom: 50px;
+}
+
+.containerNews {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* background-color: tomato; */
+    /* position: absolute; */
+    position: relative;
+    width: 100%;
+    top: 25%;
+    /* padding-inline: 10%; */
+
+}
+
+.newsBox1{
+    display: flex;
+    flex-direction: column;
+    gap: 44px 0px;
+}
+
+.newsCard {
+    height: 200px;
+    width: auto;
+    /* background-color: aqua; */
+}
+
+.newsCard>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+}
+
+.newsCard>a:hover {
+    color: rgb(141, 141, 141);
+}
+
+.newsCard>a>h4 {
+    width: 250px;
+    padding: 5px;
+}
+
+.newsCard2 {
+    padding-inline: 10%;
+    color: #fff;
+    text-decoration: none;
+}
+
+.containerNews img {
+    width: 250px;
+    height: 140px;
+    border-radius: 5px;
+}
+
+/* footer */
+
+#footerHome{
+    /* height: 50vh; */
+    width: 100%;
+    background-color: #121213;
+    padding-inline: 10%;
+
+}
+
+.containerFoot{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 200px;
+    padding-inline: 10%;
+    /* background-color: #017A23; */
+    /* overflow-x: hidden; */
+}
+
+.containerFoot ul{
+    list-style-type: none;
+    text-align: center;
+    /* width:max-content; */
+}
+
+.containerFoot>ul>li{
+    padding: 3px;
+}
+
+.containerFoot>ul>li>a {
+    text-decoration: none;
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+}
+
+.containerFoot>ul>li>p{
+    color: rgb(182, 182, 182);
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.containerFoot>ul>li>h3{
+    color: #fff;
+    padding: 8px;
+    text-transform: capitalize;
+    cursor: default;
+}
+
+.footSosmed{
+    padding: 15px;
+    width: 100%;
+    /* position: absolute; */
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.footSosmed>a{
+    padding: 0px 5px;
+}
